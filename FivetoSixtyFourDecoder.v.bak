@@ -1,0 +1,35 @@
+module FivetoSixtyFourDecoder(data_in, selected);
+
+endmodule 
+
+module ThreeToEightDecoder(); // GOing to use 4 to build a 5:32 decoder
+
+
+endmodule
+
+module TwoToFoudDecoder(select_bits, endabled; returnVal); // Going to use to select between the 3:8 decoders 
+
+	input [1:0] select_bits;
+	input enabled;
+	output reg[3:0] returnVal;
+	
+	
+	always@(enable) begin
+	
+		if(enable) begin
+			case(select_bits)
+				
+				2'b00: returnVal = 4'b0001;
+				2'b01: returnVal = 4'b0010;
+				2'b10: returnVal = 4'b0100;
+				2'b11: returnVal = 4'b1000;
+				default: returnVal = 4'b0001;
+				
+			endcase
+		end else begin
+			returnVal = 0;
+		end
+	end
+
+
+endmodule 
