@@ -13,7 +13,7 @@ module FivetoThirtyTwoDecoder(select_bits, enabled, returnVal);
 	ThreeToEightDecoder quatro(select_bits[2:0], threeToEightSelector[3], returnVal[31:24]);
 
 endmodule 
-
+/*
 module testBench();
 
 	reg enabled;
@@ -38,7 +38,7 @@ module testBench();
 	end
 	
 endmodule
-
+*/
 module ThreeToEightDecoder(select_bits, enabled, returnVal); // GOing to use 4 to build a 5:32 decoder
 
 	input[2:0] select_bits;
